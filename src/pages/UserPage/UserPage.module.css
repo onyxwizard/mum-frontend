@@ -1,0 +1,39 @@
+.formContainer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.messageField {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  font: inherit;
+}
+
+.submitButton {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+}

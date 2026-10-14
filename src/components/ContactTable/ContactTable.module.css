@@ -1,0 +1,56 @@
+.tableWrapper {
+  max-height: 62vh;
+  overflow: auto;
+}
+
+.tableWrapper table {
+  min-width: 900px;
+}
+
+.tableWrapper th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+.messageCell {
+  min-width: 220px;
+  max-width: 340px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px;
+}
+
+.searchBox {
+  position: relative;
+  width: min(100%, 320px);
+}
+
+.searchBox input {
+  padding-right: 36px;
+}
+
+.clearButton {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #667085;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
