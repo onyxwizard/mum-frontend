@@ -58,6 +58,11 @@ export const UserPage = ({ user = null, onUpdateSuccess, onSuccess }) => {
 				? await ContractFormService.updateUser(user.id, formData)
 				: await ContractFormService.createUser(formData);
 
+			console.log("Contact request response:", response);
+			console.log("Response data:", response?.data);
+			console.log("Response error:", response?.error);
+			console.log("Nested error:", response?.data?.error);
+
 			// Supabase-style responses can resolve with an error property.
 			const requestError = response?.error ?? response?.data?.error;
 
@@ -261,7 +266,7 @@ export const UserPage = ({ user = null, onUpdateSuccess, onSuccess }) => {
 						: isEditing
 							? "Save changes"
 							: isAdminForm
-								? "Create contact"
+								? "create"
 								: "Send message"}
 				</button>
 			</div>
