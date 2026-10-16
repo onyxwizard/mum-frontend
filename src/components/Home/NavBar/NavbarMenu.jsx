@@ -174,7 +174,7 @@ const NavbarMenu = ({ isOpen, onClose }) => {
 						</div>
 
 						<div className="mainnav-cta">
-							<p>Une idée, un projet ? Démarrons aujourd'hui !</p>
+							<p>Votre agence aujourd&apos;hui</p>
 							<a
 								href="/contact/"
 								className="btn-outline"
