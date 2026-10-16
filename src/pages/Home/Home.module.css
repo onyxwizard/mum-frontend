@@ -1,3 +1,20 @@
+body {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%2300ACDF" stroke="%23FFFFFF" stroke-width="0.25"></circle></svg>')12 12, auto;
+
+}
+
+.cursor {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #00ACDF;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 110;
+}
+
 .home {
   --navy: #0b1928;
   --cyan: #35d4dc;

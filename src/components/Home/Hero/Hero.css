@@ -1,0 +1,178 @@
+/* Main hero */
+.hero-section {
+  color: white;
+  background: linear-gradient(45deg, #1b2631, #22303f, #1b2631);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 3vw 60px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  width: 65%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.hero-title {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 100px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.hero-title span {
+  display: block;
+  animation: slide-up 0.8s ease both;
+}
+
+.hero-title span:first-child {
+  color: #ffffff99;
+  animation-delay: 0.2s;
+}
+
+.hero-title span:last-child {
+  animation-delay: 0.4s;
+}
+
+/* Tagline */
+.hero-tagline {
+  margin-top: 55px;
+  color: #ffffff99;
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.3;
+}
+
+.hero-tagline span {
+  display: block;
+}
+
+.hero-changing-word {
+  color: white;
+  animation: show-word 0.4s ease;
+}
+
+/* Discover button */
+.hero-scroll-button {
+  margin-top: 30px;
+  padding: 12px 0;
+  border: 0;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Video and Bootstrap ratio wrapper */
+.hero-reel {
+  position: relative;
+  width: 100%;
+}
+
+.hero-reel-inner {
+  padding: 0 3vw;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 600px;
+  height: 337px;
+  transform: translateY(-400px);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hold the enlarged video while the next section scrolls over it */
+body.fixed-container .hero-reel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  background: #182533;
+}
+
+body.fixed-container .goals {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(56.25% - 60px);
+  background: white;
+}
+
+/* Simple entrance animations */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-word {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 70vh;
+    padding: 130px 20px 50px;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-tagline {
+    margin-top: 30px;
+  }
+
+  .hero-reel-inner {
+    padding: 0 20px;
+  }
+
+  .hero-video {
+    left: 0;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    transform: none;
+  }
+
+  body.fixed-container .hero-reel {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  body.fixed-container .goals {
+    margin-top: 0;
+  }
+}

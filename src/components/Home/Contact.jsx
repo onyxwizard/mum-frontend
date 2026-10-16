@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { UserPage } from "../../pages/UserPage/UserPage";
-import Footer from "../../components/Home/Footer";
 
 export default function Contact() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
@@ -67,8 +66,6 @@ export default function Contact() {
 					</div>
 				)}
 			</main>
-
-			<Footer />
 		</div>
 	);
 }
